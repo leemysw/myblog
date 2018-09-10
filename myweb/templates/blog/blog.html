@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load blog_tags %}
+
+
+<style>
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+
+{% block main %}
+    <div class="container single-page blog-page">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="content-wrap">
+                    <header class="entry-header">
+                        <div class="posted-date">
+                            {{ blog.create_time|date:'m d , y' }}
+                        </div><!-- .posted-date -->
+                        <h2 class="entry-title"><a href=""></a>{{ blog.title }}</h2>
+                        <div class="tags-links">
+                            {% for tag in blog.tag.all %}
+                                <a href="{% url 'blog_tags' tag.id %}">#{{ tag }}</a>
+                            {% endfor %}
+                        </div><!-- .tags-links -->
+                    </header><!-- .entry-header -->
+
+                    <div class="blog-content markdown-body ">
+                        <p>{{ blog.content|safe }}</p>
+                    </div><!-- .entry-content -->
+
+                    <footer class="entry-footer flex flex-column flex-lg-row justify-content-between align-content-start align-lg-items-center">
+                        <ul class="post-share flex align-items-center order-3 order-lg-1">
+                            <label>Share</label>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul><!-- .post-share -->
+                        <div class="comments-count order-1 order-lg-3">
+                            <a href="#"><i class="fa fa-eye"></i> {{ blog.click_nums }}</a>
+                        </div><!-- .comments-count -->
+
+                    </footer><!-- .entry-footer -->
+
+                </div><!-- .content-wrap -->
+            <div id="container" ></div>
+                    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                    <script>
+                        var gitment = new Gitment({
+                            {#id: '页面 ID', // 可选。默认为 location.href#}
+                            owner: 'leemysw',
+                            repo: 'blog_comments',
+                            oauth: {
+                                client_id: 'bf5c32de7f69f3f35220',
+                                client_secret: '116f5a3fedb8d69697bea0af314de08adc6abe90',
+                            },
+                        })
+                        gitment.render('container')
+                    </script>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+
+{% endblock main %}
+
+
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>

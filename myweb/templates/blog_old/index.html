@@ -1,0 +1,129 @@
+{% extends 'blog/base.html' %}
+
+
+
+
+{% block main %}
+    {% for blog in blog_list %}
+        <article class="blog blog-{{ blog.id }}">
+            <header class="entry-header">
+                <h1 class="entry-title">
+                    <a href="{{ blog.get_detail_url }}">{{ blog.title }}</a>
+                </h1>
+                <div class="entry-meta">
+                    <span class="blog-category"><a href="#">{{ blog.category.name }} ||</a></span>
+                    <span class="comments-link"><a href="#">评论：4 </a></span>
+                    <span class="views-count"><a href="#"> 阅读：{{ blog.click_nums }} &diams;</a></span>
+                    <span class="blog-date"><a href="#"><time class="entry-date"
+                                                              datetime="{{ blog.create_time }}">{{ blog.create_time|date:'Y年m月d日' }}</time></a></span>
+                    <span class="blog-author"><a href="#"> by : {{ blog.author }}</a></span>
+                </div>
+            </header>
+            <div class="entry-content clearfix">
+                {{ blog.excerpt|safe }}
+                <div class="read-more cl-effect-14">
+                    <a href="{{ blog.get_detail_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+                </div>
+            </div>
+        </article>
+    {% empty %}
+        <div class="no-blog">暂时还没有发布的文章！</div>
+    {% endfor %}
+    <!-- 简单分页效果
+    <div class="pagination-simple">
+        <a href="#">上一页</a>
+        <span class="current">第 6 页 / 共 11 页</span>
+        <a href="#">下一页</a>
+    </div>
+    -->
+
+    <div class="blog_list_footer">
+        <nav style="text-align: center">
+        <span class="blog_footer_tip">
+            共{{ pages.count }}篇博文。
+            当前第{{ blogs.number }}页，
+            共{{ pages.num_pages }}页
+        </span>
+        </nav>
+        <script type="text/javascript">
+            {#设置凸显当前页码#}
+            $(".pagination li a").each(function () {
+                if ($(this).text() == "{{blogs.number}}") {
+                    $(this).parent().addClass("active");
+                }
+            });
+
+            {#页码跳转处理#}
+
+            function page_goto() {
+                var page = $("#page_goto input")[0].value;
+                window.location.href = '?page=' + page;  //重定向
+                return false;
+            }
+        </script>
+        <style type="text/css">
+            {#页码跳转的显示样式#}
+            #page_goto span {
+                padding: 6px 4px;
+            }
+
+            #page_goto input {
+                border: none;
+                padding: 0;
+                width: 2em;
+                text-align: center;
+            }
+        </style>
+
+        <nav style="text-align: center">
+            <div>
+                <ul class="pagination">
+                    <li class="pager-prev ">
+                        <a href="?page=
+                        {% if blogs.has_previous %}
+                            {{ blogs.previous_page_number }}
+                        {% else %}
+                            {{ blogs.number }}
+                        {% endif %}
+                    " aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    {% for page in pages.page_range_ex %}
+                        {% if page == '...' %}
+                            <li><span>...</span></li>
+                        {% else %}
+                            <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {# 下一页 #}
+                    <li class="pager-next ">
+                        <a href="?page=
+                        {% if blogs.has_next %}
+                            {{ blogs.next_page_number }}
+                        {% else %}
+                            {{ blogs.number }}
+                        {% endif %}
+                    " aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+
+                {# 页码跳转的html代码 #}
+                <ul class="pagination">
+                    <li id="page_goto">
+                    <span>
+                        <input type="text" value="{{ paginator.page_goto }}"/>
+                    </span>
+                    </li>
+                    <li><a href="javascript:void(0);" onClick="page_goto();">Go</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+{% endblock main %}
+

@@ -1,0 +1,182 @@
+edited_title :聆听城市居民的脉搏，数据分析公司「ZenCity」希望利用 AI 优化城市规划和管理
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/36kr.png
+summary      :近日，ZenCity 宣布完成了 A 轮 600 万美元的融资，由 Vertex Ventures 领投，M12,
+             Microsoft』s venture fund, 和 Canaan Partners
+             Israel 跟投。 成立于 2015 年，以色列的创业公司 ZenCity 通过整合数十万条
+             城市居民公共互动的数据，这些反馈和评论可以来源于社交媒体，新闻网站，城市热线等多个渠道，并应用
+             人工智能（AI）帮助为城市规划者和管理者提取有意义的「结构化」数据，得出他们所在地区的居民最关
+             心的问题和趋势。
+url          :http://36kr.com/p/5152397.html
+hour         :0
+time         :1536476147
+
+
+edited_title :在本土力压 IOS，印度第二大操作系统长什么样？
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ifeng.png
+summary      :最近，印度电信管理局（Trai）公布的财务数据显示，自启动 4G 服务以来不到两年，印度本土电信运营商 Jio
+             的营收市场份额在 6 月底达到 22.4％。沃达丰印度则下跌至 19.3％，Bharti
+             Airtel 维持榜首，为 31.7％。 Jio 正式成为印度第二大的电信运营商。
+url          :http://tech.ifeng.com/a/20180909/45157182_0.shtml
+hour         :0
+time         :1536476121
+
+
+edited_title :疑似 6.1 英寸「廉价版」iPhone XC 前面板现身：隐约能看到下巴
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ithome.png
+summary      :日前，Twitter 账户 @TechNavvi 放出了一组 6.1 英寸新 iPhone
+             前面板的谍照，由于名称暂不确定，外媒称其为「iPhone 9」、「新 iPhone
+             SE」。根据此前的爆料，这款 6.1 英寸新 iPhone 名称为 iPhone
+             XC（尚未确定，暂称）。 在放出的这些谍照中，隐约能看到新 iPhone
+             的下巴比较窄，这意味着采用的是和 iPhone X 一样的 COP
+             封装技术，以及三个开孔证实了 Face ID 的应用。
+url          :https://www.ithome.com/html/iphone/382035.htm
+hour         :2
+time         :1536469959
+
+
+edited_title :从淘宝不能直接分享微信说起，看中国互联网生态战
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ithome.png
+summary      :据国外媒体报道，与西方同行不同的是，中国大科技企业专注于构建一个具有更高壁垒的封闭生态系统。中国互联网的竞争不再是单个科
+             技公司的竞争，而是越来越多的生态系统之间的竞争。
+url          :https://www.ithome.com/html/it/382040.htm
+hour         :2
+time         :1536469898
+
+
+edited_title :苹果应用商店超 20 款热门应用向第三方发送用户数据
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ithome.png
+summary      :根据 Sudo Security Group 的 GuardianApp（一个由安全研究员 Will Strafach
+             负责的项目）的报告，一些热门 iOS 应用程序「使用了数据盈利公司提供的封装代码，秘密收集数千
+             万移动用户精确的位置历史记录」。报告称，在某些情况下，这些应用程序还会被用于持续向这些公司更新
+             GPS 坐标，以便这些公司通过获取和出售客户数据牟利。
+url          :https://www.ithome.com/html/it/382038.htm
+hour         :2
+time         :1536469825
+
+
+edited_title :本周苹果新闻：iPhone Xs & Apple Watch 4 更多爆料、2018 款 iPad Pro 渲染图……
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/9to5mac.png
+summary      :
+url          :https://9to5mac.com/2018/09/08/this-weeks-top-stories-more-
+             iphone-xs-apple-watch-
+             series-4-details-2018-ipad-pro-renders-more/
+hour         :2
+time         :1536469812
+
+
+edited_title :Google 的 Pixelbook2 可能会首次推出指纹安全功能
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/digitaltrends.png
+summary      :在 Chrome OS 70
+             开发者社区中发现的泄露代码表明，谷歌正在努力为该操作系统添加生物识别功能，比如指纹或面部识别。
+url          :https://www.digitaltrends.com/computing/google-may-add-
+             fingerprint-scanner-to-pixelbook-2-tablet/
+hour         :2
+time         :1536469780
+
+
+edited_title :Intel 14nm 处理器产能不足：HPE 推荐客户换用 AMD
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ifeng.png
+summary      :据 SA 拿到的一份惠普企业部门的告知函上显示，Intel 14nm Xeon-SP 处理器供应不足，推荐客户采购使用
+             AMD EPYC 芯片的服务器产品。 为了减轻用户的担忧，惠普建议客户选择 ProLiant
+             DL325 Gen10 和 ProLiant DL385 Gen10 等产品，它们搭载的是
+             AMD EPYC 7000 系列 CPU。
+url          :http://tech.ifeng.com/a/20180909/45157115_0.shtml
+hour         :2
+time         :1536469485
+
+
+edited_title :北京互联网法院挂牌，视频开庭定纷争主审 11 类案件
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/qq.png
+summary      :为规范互联网法院诉讼活动，保护当事人及其他诉讼参与人合法权益，最高法印发《关于互联网法院审理案件若干问题的规定》并作了详
+             细解读。该规定自 9 月 7 日起施行。 继去年 8 月在浙江省杭州市设立全球首家互联网法院后
+             ，我国在北京市、广东省广州市增设两家互联网法院，并于本月挂牌收案。
+url          :http://tech.qq.com/a/20180909/043446.htm
+hour         :2
+time         :1536469456
+
+
+edited_title :两万字长文深度揭秘亚马逊万亿市值背后的 8 个增长黑客营销策略
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/ifeng.png
+summary      :亚马逊，作为一家堪称「地球上最大商店」的电子商务公司，每月网站访问者超过 20
+             亿人次。基于亚马逊在过去五年内的平均销售增长率预测，到 2020 年为止它的销售预期将达到
+             3030 亿美元。 这篇两万字长文深度揭秘亚马逊的八大增长黑客营销策略。包括利用慈善计划回馈社
+             会并从中获利、如何设计网页提高下单率、病毒营销等策略。
+url          :http://tech.ifeng.com/a/20180909/45157127_0.shtml
+hour         :2
+time         :1536469387
+
+
+edited_title :华为 Mate 20 Pro 机模曝光，新机仍是刘海屏
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/techweb.png
+summary      :华为的新旗舰 Mate
+             系列尚未发布，作为国产机中的性能霸主之一，很多用户也对这款手机十分期待，虽然手机还没有正式发布
+             ，但一张疑似 Mate 20 Pro
+             机模的照片已经在网上出现，新机仍然采用了目前被广泛采用的刘海屏。
+url          :http://mo.techweb.com.cn/phone/2018-09-09/2700434.shtml
+hour         :2
+time         :1536469313
+
+
+edited_title :从拿到投资到成为独角兽，概率约为 1%
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/36kr.png
+summary      :全球知名创投研究机构 CBInsight 近日发布研究简报，通过研究超过 1100
+             家美国初创科技公司从拿到种子期投资之后的发展路径，发现其中成为独角兽的企业约为 1%。
+url          :http://36kr.com/p/5152417.html
+hour         :2
+time         :1536469287
+
+
+edited_title :马斯克在 Joe Rogan 的播客节目上疑似「当场吸大麻」
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/mashable_tech.png
+summary      :马斯克近日上了 Joe Rogan 的播客，在节目里谈论了许多话题，包括他的推特使用情况、新成立 Boring
+             公司的火焰喷射器、以及可以把人类大脑与电脑连接起来的「神经墨水」设备。节目中，Joe
+             Rogan 掏出并点燃了一只烟，马斯克问道「这是大麻烟还是雪茄？」Joe Rogan 指出这是
+             大麻烟，并询问马斯克此前是否抽过。马斯克表示自己「应该抽过一次」。后来在乔·罗根指出的劝说下，
+             马斯克不仅接过大麻烟深吸了一口，之后还在镜头前喝起了威士忌。该直播视频在美国网络上引起了争议。
+             有人指出大麻在美国加州等地是合法化的，但也有人认为马斯克在采访中代表着特斯拉 CEO，此举违反
+             了特斯拉员工商业行为准则和道德规范规定。根据特斯拉公司规定，员工应该在不受非法毒品或酒精影响的
+             情况下工作。在工作场所使用非法毒品是不可容忍的。
+url          :https://mashable.com/article/elon-musk-smokes-weed/
+hour         :5
+time         :1536461479
+
+
+edited_title :亚马逊在纽约开了自己第三家无人零售店 Amazon Go
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/mashable_tech.png
+summary      :
+url          :https://mashable.com/article/amazon-go-store-coming-new-
+             york-city/
+hour         :5
+time         :1536460020
+
+
+edited_title :硅谷巨头新趋势：为员工提供自主医疗卫生服务
+icon         :http://osxjx70im.bkt.clouddn.com/app/icon/jiemian.png
+summary      :据外媒报道，许多拥有大型办公场所的公司都会为员工提供现场或附近的医疗服务，以提高健康水平。像 Facebook
+             和苹果这样的大型科技公司都是如此，它们在园区内设有诊所，为数千名员工提供医疗服务。
+             但是，过去几年里，情况发生了一些变化。 一些科技公司，尤其是苹果和亚马逊正在自主提供服务，而不
+             是继续与第三方公司合作经营这些诊所。CNBC
+             本月早些时候报道称，亚马逊将在未来几个月内面向少数员工开设一家诊所，并计划在 2019
+             年年初扩大规模。与此同时，苹果也在为员工健康诊所展开大规模招聘，这些诊所隶属于一家名为 AC
+             Wellness 的法律子公司。
+url          :https://www.jiemian.com/article/2455775.html
+hour         :5
+time         :1536459877
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
