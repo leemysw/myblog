@@ -1,0 +1,260 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load blog_tags %}
+
+
+{% block main %}
+    <div class="container single-page">
+        <div class="row">
+
+            <div class="col-12 col-lg-9">
+
+                {% for blog in blog_list %}
+                    <div class="content-wrap">
+                        <header class="entry-header">
+                            <div class="posted-date">
+                                {{ blog.create_time|date:'b d , y' }}
+                            </div><!-- .posted-date -->
+
+                            <h2 class="entry-title">
+                                <a class="entry-title" href="{{ blog.get_detail_url }}">{{ blog.title }}</a>
+                            </h2>
+                            <div class="tags-links">
+                                {% for tag in blog.tag.all %}
+                                    <a href="#">#{{ tag }}</a>
+                                {% endfor %}
+                            </div><!-- .tags-links -->
+                        </header><!-- .entry-header -->
+
+                        <figure class="featured-image">
+                            {% if not blog.image_static %}
+                                <img src="{{ blog.image_url }}" alt="">
+                            {% else %}
+                                <img src="{{ MEDIA_URL }}{{ blog.image_static }}" alt="">
+                            {% endif %}
+                        </figure><!-- .featured-image -->
+                        <p class="photo-author">
+                            <a href="{{ blog.image_url }}"
+                               class="photo-author" target="_blank">Photo by {{ blog.image_author }} </a></p>
+                        <div class="entry-content">
+                            <p>{{ blog.excerpt }}</p>
+                        </div><!-- .entry-content -->
+
+                        <footer class="entry-footer flex flex-column flex-lg-row justify-content-between align-content-start align-lg-items-center">
+                            <ul class="post-share flex align-items-center order-3 order-lg-1">
+                                <label>Share</label>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul><!-- .post-share -->
+
+                            <a class="read-more order-2" href="{{ blog.get_detail_url }}">Read more</a>
+                            <div class="comments-count order-1 order-lg-3">
+                                <a href="#"><i class="fa fa-eye"></i> {{ blog.click_nums }}</a>
+                            </div><!-- .comments-count -->
+                        </footer><!-- .entry-footer -->
+                    </div><!-- .content-wrap -->
+                {% endfor %}
+                <div class="pagination">
+                    <ul class="pagination">
+                        <li class="pager-prev ">
+                            <a href="?page=
+                                 {% if blogs.has_previous %}
+                                    {{ blogs.previous_page_number }}
+                                 {% else %}
+                                    {{ blogs.number }}
+                                 {% endif %}
+                                 " aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% for page in pages.page_range_ex %}
+                            {% if page == '...' %}
+                                <li><span>...</span></li>
+                            {% else %}
+                                <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+
+                        <li class="pager-next ">
+                            <a href="?page=
+                                   {% if blogs.has_next %}
+                                        {{ blogs.next_page_number }}
+                                   {% else %}
+                                        {{ blogs.number }}
+                                   {% endif %}
+                                    " aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        <li id="page_goto">
+                            <label>
+                                <input type="text" value="{{ pages.page_go }}"/>
+                            </label>
+                        </li>
+                        <script type="text/javascript">
+                            function page_go() {
+                                var page = $("#page_goto input")[0].value;
+                                window.location.href = '?page=' + page;
+                                return false;
+                            }
+                        </script>
+                        <li><a href="javascript:void(0);" onClick="page_go()">Go</a></li>
+                    </ul>
+                </div>
+            </div><!-- .col -->
+            <div class="col-12 col-lg-3">
+
+                <div class="sidebar">
+                    <div class="plan-list">
+                        <h5 class="plan-list">plan list</h5>
+                        <hr class="style14"/>
+                        <ul class="list-group">
+                            <li class=" list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                <a class="fa_color2"><i class="  fa fa-spinner fa-pulse fa-3\ fa-fw"> </i></a>
+                                <a class="fa_color2"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                                <a class="fa_color3"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                                <a class="fa_color4"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                                <a class="fa_color5"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                                <a class="fa_color6"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                                <a class="fa_color7"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="list-group ">
+                            {% get_plan as plan_list %}
+                            {% for plan in plan_list %}
+                                <li class="plan-list ">
+                                    <a
+                                            tabindex="0"
+                                            class="pop plan-list btn btn-lg bd-popover list-group-item d-flex justify-content-between align-items-center list-group-item-action bg-dark"
+                                            role="button"
+                                            data-content="{{ plan.detail }}"
+                                            id="pop"
+                                    >
+                                        <i class="{{ plan.sys }} ">&nbsp;&nbsp;{{ plan.plan }}
+                                        </i>
+                                        <small class="text-muted">
+                                            {{ plan.create_time.year }}-{{ plan.create_time.month }}-{{ plan.create_time.day }}
+                                        </small>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!-- .plan_list -->
+
+                    <div class="active">
+                        <h3 class="">active</h3>
+                        <hr class="style14"/>
+                        <ul>
+                            {% archives as date_list %}
+                            {% for date in date_list %}
+                                <li>
+                                    <a href=" {% url 'blog_archives' date.year date.month %}"
+                                       class=" list-group-item d-flex justify-content-between align-items-center list-group-item-action bg-dark">
+                                        <i class="fa fa-calendar-check-o ">&nbsp;&nbsp;{{ date.year }}
+                                            年 {{ date.month }} 月
+                                        </i>
+
+                                    </a>
+
+                                </li>
+                            {% empty %}
+                                暂无归档！
+                            {% endfor %}
+                        </ul>
+                    </div><!-- .archive -->
+                    <hr class="style14"/>
+                    <div>
+                        <ul class="category_and_tags">
+                            {% get_categories as category_list %}
+                            {% for category in category_list %}
+                                <li>
+                                    <a class="category_and_tag"
+                                       href="{% url 'blog_category' category.id %}">{{ category }}&nbsp;({{ category.num_blog }})</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!-- .category -->
+                    <hr class="style15"/>
+                    <div>
+                        <ul class="category_and_tags">
+                            {% get_tag as tag_list %}
+                            {% for tag in tag_list %}
+                                <li>
+                                    <a class="category_and_tag"
+                                       href="{% url 'blog_tags' tag.id %}">{{ tag }}&nbsp;({{ tag.num_blog }})</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!-- .tags-list -->
+                    <div class="news" id="news">
+                        <h5>news</h5>
+                        <hr class="style16"/>
+                        {% for n in news %}
+
+                            <div class="card news">
+                                <li class="card news" id="b{{ n.time }}" data-toggle="collapse"
+                                              data-target="#a{{ n.time }}"
+                                              aria-expanded="true" aria-controls="a{{ n.time }}">
+                                    <div>
+                                        <img src="{{ n.icon }}">
+                                        <span>
+                                            &nbsp;&nbsp;{{ n.edited_title }}
+                                        </span>
+                                        <small class="pull-right" style="color:{{ n.color }} ">&nsc;{{ n.hour }}h ago
+                                            &nsc;
+                                        </small>
+                                    </div>
+
+                                </li>
+                                <div id="a{{ n.time }}" class="collapse hide" aria-labelledby="b{{ n.time }}"
+                                     data-parent="#news">
+                                    <div class="news">
+                                        <p>{{ n.summary }}</p>
+                                        <span class="pull-right"
+                                               style="color:{{ n.color }}">
+                                            <a href="{{ n.url }}">&nsc;read more
+                                                &nsc;</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+
+                    <!-- .news -->
+                    {% get_recent_blogs as recent_blog_list %}
+                    {% for blog in recent_blog_list %}
+                        <div class="recent-posts">
+                            <div class="recent-post-wrap">
+                                <figure>
+                                    {% if not blog.image_static %}
+                                        <img src="{{ blog.image_url }}" alt="">
+                                    {% else %}
+                                        <img src="{{ MEDIA_URL }}{{ blog.image_static }}" alt="">
+                                    {% endif %}
+                                    <a href="{{ blog.image_url }}"
+                                       class="featured-image">摄影：{{ blog.image_author }} </a>
+                                </figure>
+                                <header class="entry-header">
+                                    <div class="posted-date">
+                                        {{ blog.create_time|date:'m d , y' }}
+                                    </div><!-- .entry-header -->
+                                    <h3><a href="{{ blog.get_detail_url }}">{{ blog.title }}</a></h3>
+                                    <div class="tags-links">
+                                        {% for tag in blog.tag.all %}
+                                            <a href="{% url 'blog_tags' tag.id %}">#{{ tag }}</a>
+                                        {% endfor %}
+                                    </div><!-- .tags-links -->
+                                </header><!-- .entry-header -->
+                            </div><!-- .recent-post-wrap -->
+                        </div><!-- .recent-posts -->
+                    {% endfor %}
+                </div><!-- .sidebar -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+
+{% endblock main %}

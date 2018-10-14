@@ -1,0 +1,24 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+.idea
+
+*.conf
+
+
+# Django stuff:
+*.log
+
+
+# 忽略网站个人信息，这些信息需要单独设置，不共享
+settings.py
+
+db.sqlite3
+# 第一次上传的时候要禁用下面的忽略设置，然后自行删除文件，之后再打开
+migrations/
+!migrations/__init__.py
+media/

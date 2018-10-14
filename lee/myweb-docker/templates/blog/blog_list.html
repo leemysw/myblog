@@ -1,0 +1,228 @@
+{% load staticfiles %}
+{% load blog_tags %}
+<!DOCTYPE html>
+
+<html lang="zh-hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>leemysw</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/aboutme.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/hr.css' %}">
+</head>
+<body>
+
+<div class="outer-container">
+    <header class="site-header">
+        <div class="top-header-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 flex align-items-center">
+                        <div class="header-bar-text d-none d-lg-block">
+                            <p>Hello world, My name is <a href="https://github.com/leemysw">leemysw</a></p>
+                        </div><!-- .header-bar-text -->
+
+                        <div class="header-bar-email d-none d-lg-block">
+                            <a href="mailto:leemysw@gmail.com">leemysw@gmail.com</a>
+                        </div><!-- .header-bar-email -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-6 flex justify-content-between justify-content-lg-end align-items-center">
+                        <div class="header-bar-social d-none d-md-block">
+                            <ul class="flex align-items-center">
+                                <li><a href="https://github.com/leemysw"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="mailto:leemysw@gmail.com"><i class="fa fa-google"></i></a></li>
+                            </ul>
+                        </div><!-- .header-bar-social -->
+
+                        <div class="header-bar-search d-none d-md-block">
+                            <form action='{% url 'blog_search' %}' method="get" role="search" id="searchform"
+                                  class="input-group">
+                                {% csrf_token %}
+                                <input name="q" type="search" placeholder="Search" class="form-control" required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Go!</button>
+                                </span>
+                            </form>
+                        </div><!-- .header-bar-search -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container-fluid -->
+        </div><!-- .top-header-bar -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="site-branding flex flex-column align-items-center">
+                        <h1 class="site-title"><a href="/" rel="home">leemysw</a></h1>
+                        <p class="site-description">Blog</p>
+                    </div><!-- .site-branding -->
+                    <nav class="site-navigation">
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+
+                        <ul class="flex-lg flex-lg-row justify-content-lg-center align-content-lg-center">
+                            <li class="current-menu-item"><a href="/">Home</a></li>
+                            <li><a href="{% url 'blog_list' %} ">blog</a></li>
+                            <li><a href="{% url 'about_me' %}">about me</a></li>
+                            <li><a href="{% url 'about_me' %}">Contact</a></li>
+                        </ul>
+
+                        <div class="header-bar-social d-md-none">
+                            <ul class="flex justify-content-center align-items-center">
+                                <li><a href="https://github.com/leemysw"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="mailto:leemysw@gmail.com"><i class="fa fa-google"></i></a></li>
+                            </ul>
+                        </div><!-- .header-bar-social -->
+
+                        <div class="header-bar-search d-md-none">
+                            <form action='{% url 'blog_search' %}' method="get" role="search" id="searchform"
+                                  class="input-group">
+                                {% csrf_token %}
+                                <input name="q" type="search" placeholder="Search" class="form-control" required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Go!</button>
+                                </span>
+                            </form>
+                        </div><!-- .header-bar-search -->
+                    </nav><!-- .site-navigation -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </header><!-- .site-header -->
+    <hr class="style14"/>
+</div><!-- .outer-container -->
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <p>>一个什么都想学的伪coder&#60;</p>
+
+
+        </div>
+        <ul class="list-group">
+            <li class=" list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <a class="fa_color2"><i class="  fa fa-spinner fa-pulse fa-3\ fa-fw"> </i></a>
+                <a class="fa_color2"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                <a class="fa_color3"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                <a class="fa_color4"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                <a class="fa_color5"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                <a class="fa_color6"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+                <a class="fa_color7"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
+            </li>
+        </ul>
+        <hr class="style14"/>
+
+        <div class="row ">
+            <div class="col-md-12 col-lg-8 mx-auto co blog">
+                {% for blog in blogs %}
+                    <p class="lead text-justify"><a href="{{ blog.get_detail_url }}"> {{ blog.title }}</a></p>
+                    <div class="category"><p><i class="fa fa-calendar">&nbsp;</i>{{ blog.create_time|date:'b d , y' }}&nbsp;&nbsp;&nbsp;<i
+                            class="fa fa-tag">&nbsp;</i> {{ blog.category }}</p></div>
+                {% endfor %}
+            </div>
+            <div class="col-md-12 col-lg-4 mx-auto co d-none d-lg-block side">
+                <div><a href="/api"><i class="fa fa-connectdevelop fa-spin fa-3x fa-fw " style="color: red"></i></a>
+                    <p> &emsp;
+                        為無為 &emsp;&emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;
+                        事無事 &emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;&emsp;
+                        味無味</p>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <ul class="pagination">
+                <li class="pager-prev ">
+                    <a href="?page=
+                                 {% if blogs.has_previous %}
+                                    {{ blogs.previous_page_number }}
+                                 {% else %}
+                                    {{ blogs.number }}
+                                 {% endif %}
+                                 " aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% for page in pages.page_range_ex %}
+                    {% if page == '...' %}
+                        <li><span>...</span></li>
+                    {% else %}
+                        <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                <li class="pager-next ">
+                    <a href="?page=
+                                   {% if blogs.has_next %}
+                                        {{ blogs.next_page_number }}
+                                   {% else %}
+                                        {{ blogs.number }}
+                                   {% endif %}
+                                    " aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li id="page_goto">
+                    <label>
+                        <input type="text" value="{{ pages.page_go }}"/>
+                    </label>
+                </li>
+                <script type="text/javascript">
+                    function page_go() {
+                        var page = $("#page_goto input")[0].value;
+                        window.location.href = '?page=' + page;
+                        return false;
+                    }
+                </script>
+                <li><a href="javascript:void(0);" onClick="page_go()">Go</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="sit-footer">
+
+    <div class="monster">
+        <span class="body"></span>
+        <span class="eyes"></span>
+    </div>
+
+    <div class="footer-bar">
+        <div class="outer-container">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-12 ">
+                        {% get_pvuv as pvuv %}
+                        <p class="footer-license"><a href="http://www.miitbeian.gov.cn/">粤ICP备18080956号</a>.Powered
+                            by
+                            Django.</p>
+                        <p class="footer-license"><i class="fa fa-hand-pointer-o">{{ pvuv.pv }} </i> ━┳━　━┳━ <i
+                                class="fa fa-user"> {{ pvuv.uv }}</i></p>
+                    </div><!-- .col-xl-4 -->
+                </div><!-- .row -->
+            </div><!-- .container-fluid -->
+        </div><!-- .outer-container -->
+    </div><!-- .footer-bar -->
+</footer><!-- .sit-footer -->
+
+<script type='text/javascript' src="{% static 'blog/js/jquery.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'blog/js/bootstrap.bundle.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'blog/js/prism_patched.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'blog/js/custom.js' %}"></script>
+
+</body>
+</html>
+

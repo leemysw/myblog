@@ -1,0 +1,48 @@
+version: '3'
+services:
+
+#  mysql:
+#    #      container_name: mysql
+#    image: mysql
+#    restart: always
+#    environment:
+#      MYSQL_DATABASE: myswb
+#      MYSQL_ROOT_PASSWORD: leemy1923
+#
+#
+#    ports:
+#    - "3306:3306"
+#    # (HOST:CONTAINER)
+#    volumes:
+#    - srv:/var/lib/mysql
+
+  nginx:
+    #        container_name: nginx-container
+    build: ./nginx
+    restart: always
+    ports:
+    - "80:80"
+    - "443:443"
+    volumes:
+    - ./myweb-docker:/myweb
+    - ./nginx/cert:/etc/nginx/certs:ro
+    depends_on:
+    - myweb
+
+  myweb:
+    #        container_name: myweb-container
+    build:
+      context: myweb-docker/
+      dockerfile: Dockerfile
+    restart: always
+    command: uwsgi --ini myweb_uwsgi.ini
+#    command: python3 manage.py runserver 47.96.93.129:8000
+    ports:
+    - "8000:8000"
+    volumes:
+    - ./myweb-docker:/myweb
+#    depends_on:
+#    - mysql
+#
+#volumes:
+#  srv:
