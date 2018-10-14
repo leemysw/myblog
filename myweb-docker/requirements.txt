@@ -3,9 +3,9 @@ attrs==18.1.0
 Automat==0.7.0
 cffi==1.11.5
 constantly==15.1.0
-cryptography==2.2.2
+cryptography==2.3
 cssselect==1.0.3
-Django==2.0.6
+Django==2.0.8
 django-ckeditor==5.5.0
 django-js-asset==1.1.0
 django-pure-pagination==0.3.0
