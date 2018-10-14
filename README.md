@@ -5,6 +5,6 @@
 
 ### v 2.0
 
-- 基于docker部署
+- 重构，基于docker部署
 - 添加news
 - 基于REST-framworke开发API
