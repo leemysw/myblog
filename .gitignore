@@ -9,6 +9,7 @@ __pycache__/
 
 *.conf
 static
+cert
 
 # Django stuff:
 *.log
