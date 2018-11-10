@@ -33,6 +33,8 @@ urlpatterns = [
                   path('test/', blog_view.test, name='blog_test'),
                   path('', include('api.urls')),
                   path('', include('blog.urls')),
+                  path('', include('login.urls')),
+                  path('', include('comment.urls')),
                   # path('aboutme/', blog_view.about_me, name='about_me')
 
-              ] 
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

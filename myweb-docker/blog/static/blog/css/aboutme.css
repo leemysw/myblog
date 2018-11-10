@@ -29,10 +29,9 @@
 
 body {
     color: rgba(0, 0, 0, 0.8);
-    font-family: 'HelveticaNeueLTPro-Md', sans-serif;
+    /* font-family: 'HelveticaNeueLTPro-Md', sans-serif; */
     height: 20vh;
     padding: 22px 0;
-
 }
 
 /*--------------------------------------------------------------
@@ -408,12 +407,14 @@ a:hover, a:active {
 
 .content p {
     font-family: Monaco, 微软雅黑, sans-serif;
-    font-size: 20px;
+    /* font-size: 20px; */
     padding: 10px;
     margin: 10px 0 20px;
     display: flex;
-
+    text-shadow: 0 0 black;
 }
+
+p {}
 
 .co {
     padding: 20px;
