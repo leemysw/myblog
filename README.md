@@ -8,3 +8,9 @@
 - 重构，基于docker部署
 - 添加news
 - 基于REST-framworke开发API
+
+### v 2.1
+
+- 添加comment功能
+- 添加注册登录功能
+
