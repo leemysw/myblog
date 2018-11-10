@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load  tag_fun %}
+{% block web_name %}
+    home
+{% endblock %}
+{% block content %}
+    <div class="form-group text-left">
+        <p>你好,<a href="{% url "user_home" %}">{{ request.session.user_name }}！</a>
+            <a href="{% url "logout" %}">登出</a>&nbsp;&nbsp;
+        </p>
+        <div class="row ">
+            <div class="col-md-4 ">
+            </div>
+            <div class="col-md-4 ">
+                {% if not request.session.is_confirm %}
+
+                    <form class="form-group" method="get">
+                        {% csrf_token %}
+                        <label>验证码</label>
+                        <label><input class="form-control" name="code"></label>
+
+                        {% if message %}
+                            <div class="alert alert-warning text-justify">
+                                <span class="help-block">{{ message }}</span>
+                            </div>
+                        {% endif %}
+
+                        <span><button type="submit" class="btn btn-primary float-left">提交</button>
+                        <input type="submit" class="btn btn-primary float-right" id="get_code" name="get_code"
+                               value="获取验证码"></span>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

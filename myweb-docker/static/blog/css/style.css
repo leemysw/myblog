@@ -27,6 +27,7 @@ body {
 
 img {
     vertical-align: baseline;
+    text-align: right;
 }
 
 /*--------------------------------------------------------------
@@ -710,13 +711,13 @@ a:hover, a:active {
 /*
 # Comments
 --------------------------------*/
-.post-comments,
 .comment-form {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .post-comments h3 {
     font-size: 24px;
+    margin-top: 20px;
 }
 
 .honeypot {
@@ -725,43 +726,63 @@ a:hover, a:active {
 
 .comment-list {
     padding: 0;
-    margin: 100px 0 0;
+    margin: 15px 0 0;
     list-style: none;
 }
 
-.comment-list .comment {
-    margin-bottom: 40px;
+.comment-reply blockquote {
+    background-color: #f5f5f5;
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #666;
 }
 
-.comment-list .comment:nth-last-of-type(1) {
-    margin-bottom: 0;
+.comment-reply blockquote p {
+    margin: 0;
+    padding: 5px;
+
 }
 
-.comment-author-avatar {
-    width: 64px;
-    height: 10px;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-.comment-author-avatar img {
-    width: 100%;
+.comment-reply-content {
+    font-size: 16px;
+    padding-top: 10px;
 }
 
 .comment-wrap {
-    width: calc(100% - 84px);
+    width: 100%;
 }
 
-.comment-author a {
-    line-height: 1;
-    color: #2f2f2f;
+.comment-author {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 32px;
+    overflow: hidden; /*防止内容溢出*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.comment-author .fn a,
-.comment-author .comment-meta a {
-    padding-right: 15px;
-    margin-right: 15px;
-    border-right: 2px solid #2f2f2f;
+.comment-content {
+    margin-top: 5px;
+    font-size: 18px;
+    /*text-indent: 40px;*/
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-family: "Microsoft YaHei", Monaco, monospace;
+}
+
+
+
+.comment-time {
+    display: block;
+    font-size: 15px;
+    font-family: 方正舒体, sans-serif;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 0;
 }
 
 .comment-wrap p {
@@ -771,16 +792,10 @@ a:hover, a:active {
     color: #afafaf;
 }
 
-.comment-reply-title {
-    font-size: 24px;
-}
-
 .comments-form {
-    margin-top: 75px;
+    margin-top: 20px;
 }
 
-.comment-form input[type="text"],
-.comment-form input[type="email"],
 .comment-form textarea {
     display: block;
     width: 100%;
@@ -795,27 +810,53 @@ a:hover, a:active {
     outline: none;
 }
 
-.comment-form input[type="submit"] {
-    display: block;
-    width: 200px;
-    padding: 20px 0;
-    margin-top: 70px;
-    border: 0;
-    font-size: 14px;
-    color: #fff;
-    line-height: 1;
-    background: #2f2f2f;
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: .25rem;
+    text-align: center;
+    margin-right: 10px;
 }
 
 @media screen and (min-width: 992px) {
-    .comment-author-avatar {
-        width: 100px;
-        margin-right: 42px;
+    .comment-content {
+        font-size: 18px;
+        margin-left: 42px;
+        text-indent: 0;
     }
 
-    .comment-wrap {
-        width: calc(100% - 145px);
+    .comment-time {
+        display: block;
+        font-size: 20px;
     }
+
+}
+
+@media screen and (max-width: 667px) {
+    .comment-content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .comment-reply-content {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .ul-reply {
+        padding-left: 15px;
+    }
+
+    .comment-time {
+        display: block;
+        font-size: 10px;
+    }
+
+    .comment-reply blockquote p {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
 }
 
 /*--------------------------------------------------------------
@@ -1112,7 +1153,7 @@ a:hover, a:active {
 .news p {
 
     flex: 1 1;
-    padding:0.5em 1em 0em ;
+    padding: 0.5em 1em 0;
     line-height: 1.5em;
     font-size: 13px;
     text-align: justify;
@@ -1136,7 +1177,6 @@ a:hover, a:active {
     height: 14px;
     text-align: center;
 }
-
 
 /*--------------------------------------------------------------
 # active

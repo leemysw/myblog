@@ -401,20 +401,16 @@ a:hover, a:active {
 .content {
     display: flex;
     margin: 50px 0 30px;
-    padding: 0 20px 0;
-
 }
 
 .content p {
     font-family: Monaco, 微软雅黑, sans-serif;
     /* font-size: 20px; */
     padding: 10px;
-    margin: 10px 0 20px;
     display: flex;
     text-shadow: 0 0 black;
 }
 
-p {}
 
 .co {
     padding: 20px;
@@ -423,13 +419,15 @@ p {}
     box-sizing: border-box;
 }
 
-.blog p {
-    font-family: Monaco, 微软雅黑, sans-serif;
 
-    font-size: 24px;
-    padding: 0 20px 0;
-    margin: 0;
+
+.blog-list {
+    font-family: Monaco, 微软雅黑, sans-serif;
+    /* font-size: 20px; */
+    margin: 5px 0 5px;
+    padding: 10px;
     display: flex;
+    text-shadow: 0 0 #8a9eab;
 }
 
 .category {

@@ -1,0 +1,187 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load  tag_fun %}
+{% block web_name %}
+    comment
+{% endblock web_name %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="post-comments">
+                <div class="comment-respond">
+                    {#                    <h3 class="comment-reply-title">Leave a reply</h3>#}
+                    {% if request.session.is_login %}
+                        <form class="comment-form" id="comment-form" method="post">
+                            {% csrf_token %}
+                            <img class="avatar" id='avatar' src="{% url 'image' request.session.user_name %}"/>
+                            <span class="comment-author"> {{ request.session.user_name }} &nbsp;</span>
+                            <span class="comment-author" id="reply_who"></span>
+                            <button class="btn btn-primary float-right" id="reply_cancel" style="display: none"
+                                    type="button">取消
+                            </button>
+                            <p class="comment-content" id="comment_title" style="display: none"></p>
+                            <input id="reply_to" type="hidden" name="reply_to" value=""/>
+                            <input id="comment_id" type="hidden" name="comment_id" value=""/>
+                            <input id="reply_name" type="hidden" name="reply_name" value="">
+                            <label>
+                                <textarea name="content" cols="40" rows="10"
+                                          id="content" maxlength="500"
+                                          required=""></textarea>
+                                <input type="text" style="display:none;" id="id_honeypot" name="honeypot">
+                            </label>
+
+                            <button type="reset" class="btn btn-danger float-right">重置</button>
+                            <button type="submit" id="submit" class="btn btn-primary float-right">提交</button>
+
+                        </form><!-- .comment-form -->
+                    {% else %}
+                        <div class="need-login">
+                            <a href="{% url 'login' %}?next={% url 'comment' %}">登录后即可评论</a>
+                        </div>
+                    {% endif %}
+                </div><!-- .comments-form -->
+
+                <h3 class="comments-title">Comments</h3>
+                <ol class="comment-list">
+                    <li class="comment">
+                        <div class="comment-body flex justify-content-between">
+                            <div class="comment-wrap " id="comment-reply">
+                                {% for comment in comment_list %}
+                                    <hr class="style11">
+                                    <img class="avatar" src="{% url 'image' comment.user.name %}"/>
+                                    <span class="comment-author">
+                                        {{ comment.user.name }}
+                                    </span>
+                                    <div class="comment-content">
+                                      {{ comment.content|safe }}
+                                    </div>
+                                    <span class="comment-time">
+                                        {{ comment.time }}
+                                        <span class="reply-this">
+                                             <a href='javascript:void(0);' onclick='reply_click(this);'
+                                                comment="{{ comment }}"
+                                                comment_id="{{ comment.id }}"
+                                                reply_to=""
+                                                reply_name="{{ comment.user.name }}"
+                                                avatar="{% url 'image' comment.user.name %}">
+                                                 回复
+                                             </a>
+                                             <a href='javascript:void(0);' onclick='up(this);' id="up"
+                                                comment_id="#reply-{{ comment.id }}" bool="收起">
+                                                 收起
+                                             </a>
+{#                                            <a data-toggle="collapse" href="#reply-{{ comment.id }}"#}
+{#                                               aria-expanded="true" id="comment-reply-{{ comment.id }}"#}
+{#                                               aria-controls="reply-{{ comment.id }}">回复#}
+{#                                            </a>#}
+                                        </span>
+{#                                            <form class="comment-form collapse" id="reply-{{ comment.id }}"#}
+{#                                                  aria-labelledby="comment-reply-{{ comment.id }}"#}
+{#                                                  data-parent="#comment-reply">#}
+{#                                                {% csrf_token %}#}
+{#                                          #}
+{#                                                <input type="hidden" name="comment" id="comment-id-{{ comment.id }}"#}
+{#                                                       value="{{ comment.id }}">#}
+{#                                                <button class="btn btn-primary" type="button" data-toggle="collapse"#}
+{#                                                        data-target="#reply-{{ comment.id }}" aria-expanded="true"#}
+{#                                                        aria-controls="reply-{{ comment.id }}">#}
+{#                                                    取消回复#}
+{#                                                </button>#}
+{#                                                <button type="submit" id="submit"#}
+{#                                                        class="btn btn-primary float-right">提交</button>#}
+{#                                            </form>#}
+                                    </span>
+
+                                    <div class="comment-reply" id="reply-{{ comment.id }}">
+                                        <ul class="ul-reply">
+                                            {% for reply in comment.replies.all %}
+                                                    <hr class="style14">
+                                                    <img class="avatar" src="{% url 'image' reply.user.name %}"/>
+                                                    <span class="comment-author">{{ reply.user.name }}</span>
+                                                    <div class="comment-reply-content">
+                                                        {% if reply.reply.id %}
+
+                                                            <blockquote class="reply_to_reply blockquote">
+                                                                @{{ reply.reply.user.name }}：
+                                                                <p>
+                                                                    <i class="fa fa-quote-left"></i>{{ reply.reply.content|safe }}
+                                                                </p></blockquote>
+                                                        {% endif %}
+                                                        {{ reply.content|safe }}
+                                                    </div>
+                                                    <span class="comment-time">
+                                                        {{ comment.time }}
+                                                        <span class="reply-this">
+                                                            <a href='javascript:void(0);' onclick='reply_click(this);'
+                                                               comment="{{ reply.content }}"
+                                                               comment_id="{{ comment.id }}" reply_to="{{ reply.id }}"
+                                                               reply_name="{{ reply.user.name }}">
+                                                                回复
+                                                            </a>
+                                                        </span>
+                                                    </span>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endfor %}
+                            </div><!-- .comment-wrap -->
+                        </div><!-- .comment-body -->
+                    </li><!-- .comment -->
+                </ol><!-- .comment-list -->
+            </div><!-- .post-comments -->
+
+            <div class="pagination">
+                <ul class="pagination">
+                    <li class="pager-prev ">
+                        <a href="?page=
+                                 {% if comment_list.has_previous %}
+                                    {{ comment_list.previous_page_number }}
+                                 {% else %}
+                                    {{ comment_list.number }}
+                                 {% endif %}
+                                 " aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% for page in pages.page_range_ex %}
+                        {% if page == '...' %}
+                            <li><span>...</span></li>
+                        {% else %}
+                            <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    <li class="pager-next ">
+                        <a href="?page=
+                                   {% if comment_list.has_next %}
+                                        {{ comment_list.next_page_number }}
+                                   {% else %}
+                                        {{ comment_list.number }}
+                                   {% endif %}
+                                    " aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    <li id="page_goto">
+                        <label>
+                            <input type="text" value="{{ pages.page_go }}"/>
+                        </label>
+                    </li>
+                    <script type="text/javascript">
+                        function page_go() {
+                            var page = $("#page_goto input")[0].value;
+                            window.location.href = '?page=' + page;
+                            return false;
+                        }
+                    </script>
+                    <li><a href="javascript:void(0);" onClick="page_go()">Go</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block web_name %}
+    register
+{% endblock web_name %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 ">
+        </div>
+        <div class="col-md-4 ">
+            <form class='form-login' method="post">
+                {% csrf_token %}
+                <h2 class="text-center">注册</h2>
+
+                <div class="form-group">
+                    <label><input type="password" style="display: none;"/></label>
+                    {{ register_form.name.label_tag }}
+                    {{ register_form.name }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.password.label_tag }}
+                    {{ register_form.password }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.email.label_tag }}
+                    {{ register_form.email }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.sex.label_tag }}
+                    {{ register_form.sex }}
+                </div>
+                <div class="form-group captcha_css">
+                    {{ captcha_form.captcha }}
+                </div>
+
+                {% if message %}
+                    <div class="alert alert-warning text-justify">
+                        <span class="help-block">{{ message }}</span>
+                    </div>
+                {% endif %}
+
+                <button type="reset" class="btn btn-default float-left">重置</button>
+                <button type="submit" class="btn btn-primary float-right">提交</button>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

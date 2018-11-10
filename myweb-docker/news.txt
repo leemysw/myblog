@@ -1,0 +1,248 @@
+edited_title :黑莓拟最高 15 亿美元收购网络安全公司 Cylance
+icon         :https://holoread-img.geekpark.net/app/icon/ifeng.png
+summary      :北京时间 11 月 10 日消息，知情人士称，黑莓公司正在洽购网络安全公司 Cylance，最高出资 15 亿美元。
+             Cylance
+             总部位于美国加州欧文市，开发基于人工智能的产品，预防企业遭到网络攻击。Cylance
+             近期曾考虑提交首次公开招股 (IPO) 申请。
+             知情人士称，这笔收购交易可能最快将在下周宣布，但是仍存在谈判破裂的可能。黑莓和 Cylance
+             均尚未对此消息置评。
+url          :http://tech.ifeng.com/a/20181110/45218496_0.shtml
+hour         :0
+time         :1541844810
+
+
+edited_title :特斯拉前员工被起诉骗取 930 万美元，面临十项指控
+icon         :https://holoread-img.geekpark.net/app/icon/techweb.png
+summary      :11 月 10 日消息，据国外媒体报道，特斯拉一名前员工被起诉在任职期间骗取了公司 930
+             万美元的资金，目前欺诈等十项指控。 此次被起诉的是特斯拉前员工萨利尔·帕卢卡 (Salil
+             Parulekar)，现年 32 岁的他 2013 年至 2017 年 12
+             月在特斯拉工作，最后的职务是全球供应链管理部门的一名经理。
+             从检方的指控来看，萨利尔·帕卢卡是在 2016 年到 2017
+             年，也就是在他从特斯拉离职前两年的时间里骗取了公司的 930 万美元。
+url          :http://www.techweb.com.cn/world/2018-11-10/2711613.shtml
+hour         :0
+time         :1541844087
+
+
+edited_title :京东 X 未来餐厅开业，机器人「大厨」可炒 40 道菜
+icon         :https://holoread-img.geekpark.net/app/icon/ithome.png
+summary      :11 月 10 日下午消息，京东集团今日宣布，首家京东 X 未来餐厅在天津正式开业，在 X
+             未来餐厅内，点餐、配菜、炒菜、传菜、结算等环节，均由机器人完成。 京东方面介绍，X
+             未来餐厅面积近 400 平米，最多可容纳 100 人同时就餐，从点餐、配菜、炒菜、传菜到用餐、
+             结算，智能机器人和人工智能后台贯穿餐厅运营全过程，「消费者点餐后，后台将炒菜任务分配给烹饪机器
+             人，开始菜品的烹制，最后传菜机器人会将烹制好的菜品送到餐桌前」。
+url          :https://www.ithome.com/0/394/060.htm
+hour         :1
+time         :1541841356
+
+
+edited_title :效仿谷歌：Facebook 不再强制员工通过仲裁处理性骚扰
+icon         :https://holoread-img.geekpark.net/app/icon/ithome.png
+summary      :11 月 10 日下午消息，根据《华尔街日报》的报道，继谷歌之后，Facebook
+             周五也终止了要求员工通过非公开仲裁来处理性骚扰指控的政策。 目前，该公司允许员工将这类型指控提
+             交至法庭审理。科技公司长期以来坚持要求员工通过仲裁来处理性骚扰案件，以防止员工在法庭上起诉公司
+             。
+url          :https://www.ithome.com/0/394/052.htm
+hour         :2
+time         :1541839202
+
+
+edited_title :蘑菇街递交赴美上市申请，腾讯占股比例最大
+icon         :https://holoread-img.geekpark.net/app/icon/jiemian.png
+summary      :美国东部时间 11 月 9 日，时尚电商平台蘑菇街向美国证券交易委员会 (SEC) 递交了 IPO
+             申请文件，申请在纽约证券交易所挂牌上市，股票代码为「MOGU」。主承销商为摩根士丹利、瑞信和华
+             兴资本，拟筹集最多 2 亿美元资金。 蘑菇街于 2011 年上线，2016
+             年与美丽说合并，公司旗下包括蘑菇街、美丽说、uni 等产品与服务。公开资料显示，截至 2018
+             年 9 月 30 日，蘑菇街平台上月度移动端活跃用户为 6260 万，主要为年龄在 15 至
+             30 岁之间的年轻女性。
+url          :https://www.jiemian.com/article/2611229.html
+hour         :5
+time         :1541829224
+
+
+edited_title : iPhone XS 人脸识别方案供应商被收购：竟不是苹果
+icon         :https://holoread-img.geekpark.net/app/icon/ifeng.png
+summary      :从 iPhone X 开始，苹果选择抛弃指纹识别，开始启用了 Face ID，作为 3D
+             人脸识别方案的核心供应商，Finisar
+             一直都在背后默默支持着苹果，当然由于种种协议规定，他们的合作也是排他的。
+             最新的消息显示，光学系统公司 II-VI 收购了 Finisar，通过现金加股票的形式以 32
+             亿美元完成收购。该交易完成后，Finisar 股东将持有合并后新公司约 31% 的股份。届时，
+             II-VI 现任 CEO 温森特·马特拉将出任新公司 CEO 一职。
+url          :http://tech.ifeng.com/a/20181110/45218502_0.shtml
+hour         :5
+time         :1541827759
+
+
+edited_title :谷歌用 AI 帮《纽约时报》数字化 500 万张历史照片
+icon         :https://holoread-img.geekpark.net/app/icon/ithome.png
+summary      :11 月 10 日消息，在时报广场办公室的地下室里，大量橱柜和抽屉里存储了《纽约时报》500 万到 700
+             万张照片。现在，《纽约时报》正与谷歌合作，利用人工智能技术将这些照片数字化。 《纽约时报》首席
+             技术官尼克·洛克威尔表示:「这是个易腐烂文件的宝库，是一部无价的编年史，不仅记录了《纽约时报》
+             的历史，也记录了近一个世纪以来塑造我们现代世界的全球事件。」 谷歌表示，《纽约时报》还将能够使
+             用其对象识别工具从照片中提取更多信息，使它们更容易分类，以供将来使用。
+url          :https://www.ithome.com/0/394/024.htm
+hour         :6
+time         :1541824632
+
+
+edited_title :龙卷风袭击一亚马逊仓储中心，导致部分包裹的配送被延迟
+icon         :https://holoread-
+             img.geekpark.net/app/icon/businessinsider.png
+summary      :本周，美国的社交媒体上多了很多关于自己在亚马逊的订单配送延迟的抱怨，其中部分用户甚至在下单 10
+             天后都没有收到自己的货物。但这些抱怨中相当一部分延迟是由于不可抗力导致的。
+             上周，一场龙卷风袭击了亚马逊位于巴尔的摩的一个仓储和分拣中心，风暴导致一堵 15
+             米高的墙倒塌，两名工人丧生。
+url          :https://www.businessinsider.com/why-amazon-delivery-is-
+             delayed-2018-11
+hour         :6
+time         :1541824435
+
+
+edited_title :Facebook 在美国的活跃度正在下降
+icon         :https://holoread-
+             img.geekpark.net/app/icon/businessinsider.png
+summary      :11 月 9 日，据 BI 报道，Pivotal 分析师 Brian Wieser 表示，9 月份 Facebook
+             旗下的全部数字服务（WhatsApp、Facebook、Instagram…）的内容消费量相比
+             去年同期整体下降了 7%。 同时，根据尼尔森提供的美国数字内容消费数据，Facebook
+             在线上内容消费领域所占的份额，从去年九月的 16.5% 下降到今年的
+             14.3%。尽管如此，Facebook 仍然掌控着大量用户注意力的互联网内容巨头，仅次于谷歌。
+url          :https://www.businessinsider.com/us-facebook-engagement-
+             declines-2018-11
+hour         :6
+time         :1541824124
+
+
+edited_title :迪士尼表示 Hulu 可能会涨价，但分析师认为这样做不太合逻辑
+icon         :https://holoread-
+             img.geekpark.net/app/icon/businessinsider.png
+summary      :在周四的迪士尼季度财报电话会议上，迪士尼 CEO 鲍勃艾格称，他认为 Hulu 在定价上还有相当的「价格弹性」。Hulu
+             是迪士尼控股的数字流媒体服务提供商，在美国的市场占有率名列前茅。
+             但行业内分析师确认为「涨价」对 Hulu 来说并不合逻辑，因为整个付费电视市场刚刚经历历史上业
+             绩最糟的季度，消费者对价格正变得越来越敏感。当前持有 Hulu 30% 股份的传统电视行业巨头
+             Comcast 可能会出售自己手头的 Hulu 股份，将注意力放到其他领域。
+url          :https://www.businessinsider.com/disney-says-price-hikes-may-
+             be-coming-to-hulu-analysis-2018-11
+hour         :6
+time         :1541823558
+
+
+edited_title :Xbox One 上的「撕毁质保无效」标签或违反美国联邦法律，微软因此被起诉
+icon         :https://holoread-img.geekpark.net/app/icon/motherboard.png
+summary      :微软因在 Xbox One 游戏机上贴了「撕毁质保无效」的密封标签，于近日被一名用户告上联邦法庭。 今年早些时候，美国联
+             邦贸易委员会就向包括微软在内的六家公司发出警告信，称它们的密封标签违反了联邦马格努森莫斯保修法
+             ，这一法令颁布与 1975
+             年，禁止设备制造商以「用户没有使用官方的维修零件」为由拒绝提供质保服务。
+url          :https://motherboard.vice.com/en_us/article/gy7bn7/microsoft-
+             sued-over-the-xbox-ones-warranty-void-if-
+             removed-sticker
+hour         :6
+time         :1541823168
+
+
+edited_title :特斯拉将联合其他公司在加州部署能储电两百万度的电池设备，取代三个天然气发电厂
+icon         :https://holoread-img.geekpark.net/app/icon/electrek.png
+summary      :加州公共事业委员会于本周批准了太平洋燃气电力公司的一项提议，让特斯拉和其他几家公司在加州部署电池系统来储存电能，设计储电
+             量达到 200 万度。 太平洋燃气电力公司今年早些时候就在与特斯拉就相关业务进行谈判，涉及四个
+             独立的电能储备项目，其中两个在完工后将成为世界上最大的电池系统。
+url          :https://electrek.co/2018/11/09/tesla-pge-giant-energy-
+             storage-replace-gas-plants/
+hour         :6
+time         :1541822689
+
+
+edited_title :苹果公布 iPhone X 和 MacBook Pro 质量问题，并推免费维修计划
+icon         :https://holoread-img.geekpark.net/app/icon/9to5mac.png
+summary      :在 9 月 iPhone XS 发布后，前代的 iPhone X 正式停产。而就在北京时间 11 月 10
+             日凌晨，苹果确认了一项关于 iPhone X 显示模块的质量问题，可能导致 iPhone X
+             的屏幕出现触摸失灵和错误触发等情况。针对这一问题，苹果推出了免费的维修计划。
+             同时，苹果还确认了部分 MacBook Pro 13 寸上的 SSD
+             硬盘可能存在质量问题，也将提供免费维修。
+url          :https://9to5mac.com/2018/11/09/apple-repair-program-iphone-
+             x-non-tb-mbp/
+hour         :7
+time         :1541821128
+
+
+edited_title :王思聪旗下公司北京普思向乐视体育索赔
+icon         :https://holoread-img.geekpark.net/app/icon/sina.png
+summary      :乐视网 11 月 9 日晚公告称，公司近期收到《仲裁申请书》，申请人为乐视体育其时新增投资者北京普思、厦门嘉御、天弘创新
+             ，向原股东申请仲裁金额共约 2.4 亿余元。 值得注意的是，北京普思系万达集团董事长王健林之子
+             王思聪全资持有。北京普思本次以乐视体育违约侵害股东利益为由，要求裁决乐视体育赔偿经济损失
+             9785.16 万元。
+url          :https://tech.sina.com.cn/i/2018-11-10/doc-
+             ihnstwwp8857329.shtml
+hour         :8
+time         :1541818306
+
+
+edited_title :苹果与亚马逊达成新协议，更多苹果产品将上架
+icon         :https://holoread-img.geekpark.net/app/icon/sina.png
+summary      :北京时间 11 月 10 日，亚马逊在一份声明中称，该公司已经和苹果达成一项新协议，消费者将很快在亚马逊网站上看到一系列
+             苹果最新产品。新协议将在未来几周内在美国、法国、德国、意大利、西班牙、日本和印度等地生效。该协
+             议意味着苹果最新产品如 iPhone XR、XS 和 XS Max 将在亚马逊上出售。 亚马逊
+             和苹果之间有一段试探性地达成交易的历史，它们都小心翼翼地避免给对方带来不必要的优势。直到去年，
+             两家公司在 Apple TV
+             的问题上一直僵持不下。苹果希望亚马逊在其网站上销售这款产品，反过来，亚马逊也希望苹果在
+             Apple TV 上加入 Amazon Prime 视频应用。
+url          :https://tech.sina.com.cn/i/2018-11-10/doc-
+             ihmutuea8731506.shtml
+hour         :8
+time         :1541818194
+
+
+edited_title :5G 牌照最快年底发放，明年上半年将推出 5G 智能手机
+icon         :https://holoread-img.geekpark.net/app/icon/qq.png
+summary      :11 月 9 日是世界互联网大会最后一天，在上午的「5G 时代：开放合作共创未来」论坛上，中国工程院院士邬贺铨透露，我国
+             5G 牌照最快将于今年年底发放；中国移动副总裁李慧镝表示，中国移动 5G 计划 2019
+             年预商用，2020 年商用，2019 年上半年推出 5G 智能手机。 「1G 到 4G
+             是面向个人通信的，5G
+             是面向移动互联网和工业互联网的。」中国工程院院士邬贺铨在会上演讲时说，「随着 5G
+             的出现，移动边缘计算将得到更大的普及，一个 5G 系统是计算和通信融合的系统。
+url          :http://tech.qq.com/a/20181110/002416.htm
+hour         :8
+time         :1541817376
+
+
+edited_title :蘑菇街向美 SEC 提交 IPO 招股书，拟筹集最多 2 亿美元资金
+icon         :https://holoread-img.geekpark.net/app/icon/ifeng.png
+summary      :11 月 10 日讯，蘑菇街周五向美国证券交易委员会（SEC）提交了 IPO
+             上市申请文件。这份文件显示，蘑菇街计划在纽约证券交易所挂牌上市，股票代码为「MOGU」，拟筹集
+             最多 2 亿美元资金。 蘑菇街在 IPO
+             招股书中称，该公司是中国市场上领先的在线时尚和生活方式目的地，公司平台上有大量的直播视频广播。
+url          :http://tech.ifeng.com/a/20181110/45218522_0.shtml
+hour         :8
+time         :1541817160
+
+
+edited_title :SpaceX 拟降低互联网卫星轨道高度，减少太空垃圾
+icon         :https://holoread-img.geekpark.net/app/icon/ithome.png
+summary      :北京时间 11 月 10 日，据 TheVerge 报道，美国太空探索公司 SpaceX 目前正在修改其
+             Starlink 卫星互联网计划，希望能够在比原计划更低的高空运行部分卫星，从而减少太空垃圾。
+             SpaceX 最近在向美国联邦通信委员会 (FCC)
+             提交的一份新文件当中，要求该机构修改其许可，使 1500 多颗 Starlink
+             卫星能够在比公司最初设想高度低 600 公里的高空运行。
+url          :https://www.ithome.com/0/394/005.htm
+hour         :9
+time         :1541815118
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

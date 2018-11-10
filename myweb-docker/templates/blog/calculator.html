@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        alert('hehe')
+    </script>
+    <meta charset="UTF-8">
+    <title>heihei</title>
+</head>
+<body>
+
+<form action="/calculator/" method="post" name="">
+    {% csrf_token %}
+    <label>input<input name="w_per_gross" type="number" step="any"></label>
+    <label><input type="submit"></label>
+</form>
+{{ w_list }}
+{{ w_gross }}
+{% for w_ in w_list %}
+<p>{{ w_ }}</p>
+{% endfor %}
+</body>
+</html>
+
+<script type="application/javascript">
+    var a = 1
+    function add() {
+        a++
+    }
+    add()
+</script>

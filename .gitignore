@@ -8,7 +8,7 @@ __pycache__/
 .idea
 
 *.conf
-
+static
 
 # Django stuff:
 *.log

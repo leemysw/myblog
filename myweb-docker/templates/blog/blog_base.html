@@ -4,9 +4,13 @@
 
 <html lang="zh-hans">
 <head>
+    <title>leemysw</title>
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>leemysw</title>
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
 
@@ -15,10 +19,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/aboutme.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/hr.css' %}">
-    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/prism.css' %}">
+
 </head>
 <body>
 
@@ -74,11 +77,7 @@
                 <div class="col-12">
                     <div class="site-branding flex flex-column align-items-center">
                         <h1 class="site-title"><a href="/" rel="home">leemysw</a></h1>
-                        <p class="site-description">
-                            {% block web_name %}
-
-                            {% endblock %}
-                        </p>
+                        <p class="site-description">Personal Blog</p>
                     </div><!-- .site-branding -->
                     <nav class="site-navigation">
                         <div class="hamburger-menu d-lg-none">
@@ -90,12 +89,12 @@
 
                         <ul class="flex-lg flex-lg-row justify-content-lg-center align-content-lg-center">
                             <li class="current-menu-item"><a href="/">Home</a></li>
-                            <li><a href="{% url 'blog_list' %} ">blog</a></li>
+                            <li><a href=" {% url 'blog_list' %} ">blog</a></li>
                             <li><a href="{% url 'about_me' %}">about me</a></li>
                             <li><a href="{% url 'comment' %}">Contact</a></li>
                         </ul>
 
-                        <div class="header-bar-social d-md-none ">
+                        <div class="header-bar-social d-md-none">
                             <ul class="flex justify-content-center align-items-center">
                                 <li><a href="https://github.com/leemysw"><i class="fa fa-github"></i></a></li>
                                 <li><a href="mailto:leemysw@gmail.com"><i class="fa fa-google"></i></a></li>
@@ -126,39 +125,58 @@
             </div><!-- .row -->
         </div><!-- .container -->
     </header><!-- .site-header -->
-    <hr class="style14"/>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 mx-auto">
+                <div class="swiper-container hero-slider">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img src="{% static 'blog/images/bg-1.jpg' %}" alt="First slide">
+                                <div class="carousel-caption d-none d-lg-block">
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'blog/images/bg-2.jpg' %}" alt="Second slide">
+                                <div class="carousel-caption d-none d-lg-block">
+                                    <h6>
+                                        <a style="color: #bbdaff"
+                                           href="https://unsplash.com/photos/jiqbWnkkgzI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">photo
+                                            by: Daniel Sandoval on Unsplas</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .swiper-container -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-9 col-12 col-lg-3">
+                    <a href="#">
+                        <div class="yt-subscribe">
+                            <img src="{% static '/blog/images/me.png' %}" alt="Youtube Subscribe">
+                            <h3>leemysw</h3>
+                            <p>为无为，事无事</p>
+                        </div><!-- .yt-subscribe -->
+                    </a>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container 头像 -->
+    </div><!-- .hero-section -->
+    {% block main %}
+
+    {% endblock main %}
+
 </div><!-- .outer-container -->
-
-<div class="content">
-    <div class="container">
-        <div class="row justify-content-center">
-            <p>>一个什么都想学的伪coder&#60;</p>
-
-
-        </div>
-        <ul class="list-group">
-            <li class=" list-group-item d-flex justify-content-between align-items-center list-group-item-action">
-                <a class="fa_color2"><i class="  fa fa-spinner fa-pulse fa-3\ fa-fw"> </i></a>
-                <a class="fa_color2"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-                <a class="fa_color3"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-                <a class="fa_color4"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-                <a class="fa_color5"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-                <a class="fa_color6"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-                <a class="fa_color7"><i class=" fa fa-spinner fa-pulse fa-3\ fa-fw"></i></a>
-            </li>
-        </ul>
-        <hr class="style14"/>
-
-
-        {% block content %}
-
-        {% endblock %}
-
-
-    </div>
-
-</div>
-
 
 <footer class="sit-footer">
 
@@ -171,6 +189,7 @@
         <div class="outer-container">
             <div class="container-fluid">
                 <div class="row justify-content-between">
+
                     <div class="col-12 ">
                         {% get_pvuv as pvuv %}
                         <p class="footer-license"><a href="http://www.miitbeian.gov.cn/">粤ICP备18080956号</a>.Powered
@@ -190,145 +209,21 @@
 <script type='text/javascript' src="{% static 'blog/js/bootstrap.bundle.min.js' %}"></script>
 <script type='text/javascript' src="{% static 'blog/js/prism_patched.min.js' %}"></script>
 <script type='text/javascript' src="{% static 'blog/js/custom.js' %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 <script>
     $(function () {
-        $('.captcha').css({
-            'cursor': 'pointer'
-        });
-        $('.captcha').click(function () {
-            console.log('click');
-            $.getJSON("/captcha/refresh/",
-                function (result) {
-                    $('.captcha').attr('src', result['image_url']);
-                    $('#id_captcha_0').val(result['key'])
-                });
+        $('.pop').popover(
+            {
+                trigger: 'hover focus',
+                toggle: "popover",
+                placement: "bottom",
+                {#title: "",#}
+                delay: {"show": 100, "hide": 100},
+                html: true,
+            }
+        )
+    })
 
 
-        });
-    });
-</script>
-
-<script>
-    function up(obj) {
-        obj = $(obj);
-        var stu = obj.text();
-        var comment_id = $(obj.attr('comment_id'));
-        var bool = obj.attr('bool');
-
-        if (bool === '收起') {
-            $(comment_id).hide();
-            obj.text('展开');
-            obj.attr('bool', '展开');
-        } else {
-            $(comment_id).show();
-            obj.text('收起');
-            obj.attr('bool', '收起');
-        }
-    }
-
-
-</script>
-
-<script>
-    function reply_click(obj) {
-        setTimeout('CKEDITOR.instances.content.focus()', 200);
-
-        obj = $(obj);
-        var reply_comment = $('#comment_title');
-
-        $('#comment_id').val(obj.attr('comment_id'));
-        $('#reply_to').val(obj.attr('reply_to'));
-        $('#reply_name').val(obj.attr('reply_name'));
-        {#$('#avatar').attr('src').val(obj.attr('avatar'));#}
-        reply_comment.html(obj.attr("comment"));
-        $("#reply_who").text('回复：' + obj.attr('reply_name'));
-        $("#reply_cancel").show();
-        reply_comment.show();
-
-        return false;
-    }
-
-    var reply_comment = $('#comment_title');
-
-    $('#reply_cancel').click(function () {
-        $('#comment_id').val('');
-        $('#reply_to').val('');
-        $('#reply_name').val('');
-        reply_comment.text('');
-        $("#reply_who").text('');
-        $('#reply_cancel').hide();
-        reply_comment.hide();
-    });
-</script>
-
-<script>
-
-    CKEDITOR.replace('content', {width: '100%', language: 'zh-cn', uiColor: '#f5f5f5'},);
-    {#CKEDITOR.config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';#}
-    CKEDITOR.config.toolbar = 'Basic';
-    {#CKEDITOR.config.toolbarLocation = "bottom";#}
-    CKEDITOR.config.toolbarCanCollapse = true;
-    {#CKEDITOR.config.toolbarStartupExpanded = false;#}
-    {#CKEDITOR.config.toolbar = [ 'bold', 'italic', '|', 'undo', 'redo' ];#}
-    CKEDITOR.config.toolbar_Basic =
-        [
-            ['div', 'CodeSnippet', 'Source',],
-            ['Bold', 'Italic', 'Underline', 'Strike', '-', 'Subscript', 'Superscript'],
-            ['Blockquote'],
-            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['HorizontalRule', 'Smiley', 'SpecialChar'],
-            ['TextColor', 'BGColor'],
-            ['Styles', 'Format', 'Font', 'FontSize'],
-        ];
-
-    CKEDITOR.config.extraPlugins = 'lineutils,widget,codesnippet';
-
-
-</script>
-
-<script>
-
-
-    $(document).ready(function () {
-
-            $.ajaxSetup({
-                data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
-            });
-
-            $('#comment-form').submit(function () {
-                var comment_content = CKEDITOR.instances.content.getData();
-                var comment_id = $('#comment_id').val();
-                var reply_to = $('#reply_to').val();
-
-                $.ajax({
-                    type: "POST",
-                    data: {
-                        comment_content: comment_content,
-                        comment_id: comment_id,
-                        reply_to: reply_to,
-                    },
-                    url: "{% url 'comment' %}",
-                    cache: false,
-                    dataType: "json",
-                    {#success: function (html, Status) {#}
-                    {#    window.location.reload();#}
-                    {# }, #}
-                    success: function (data) {
-                        if (data.msg === 'success') {
-                            window.location.reload();
-                        }
-                    },
-                    error: function () {
-                        window.location.href = '/login/?next=/comment/';
-                    },
-                });
-                return false;
-            });
-        }
-    )
 </script>
 </body>
 </html>
-
